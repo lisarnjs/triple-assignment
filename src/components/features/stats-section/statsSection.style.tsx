@@ -65,22 +65,21 @@ export const AwardsDiv = styled(AnimationDiv)`
   margin-top: 50px;
   animation-delay: 200ms;
   white-space: nowrap;
+`
+interface AwardDivProps {
+  playStore?: boolean
+}
+export const AwardDiv = styled.div<AwardDivProps>`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 39px;
+  padding-left: 62px;
+  background-size: 54px 54px;
+  background-repeat: no-repeat;
+  background-image: url(${(props) =>
+    props.playStore ? PlayStore : BadgeApple});
 
-  .awardsDiv {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-left: 62px;
-    margin-right: 39px;
-    background-size: 54px 54px;
-    background-repeat: no-repeat;
-  }
-  .googlePlayStore {
-    background-image: url(${PlayStore});
-  }
-  .badgeApple {
-    background-image: url(${BadgeApple});
-  }
   span {
     font-family: sans-serif;
     font-size: 14px;
