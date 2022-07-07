@@ -1,15 +1,13 @@
 import styled from 'styled-components'
-
-const Div = styled.div`
-  text-align: center;
-  background-color: pink;
-`
+import Header from './components/shared/header'
+import MainGuide from './pages/main-guide'
 
 function App() {
   return (
-    <Div>
-      <h1>hihi</h1>
-    </Div>
+    <>
+      <Header />
+      <MainGuide />
+    </>
   )
 }
 
